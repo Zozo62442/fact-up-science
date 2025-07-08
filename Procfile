@@ -1,1 +1,1 @@
-web: gunicorn fact-up-science.wsgi
+web: gunicorn my_blog.wsgi
