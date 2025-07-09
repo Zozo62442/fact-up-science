@@ -9,3 +9,6 @@ node_modules/
 .github/
 cloudinary_python.txt
 *.sqlite3
+db.sqlite3
+*.pyc
+/staticfiles/
