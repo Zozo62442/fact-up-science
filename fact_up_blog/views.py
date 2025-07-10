@@ -12,5 +12,5 @@ def index(request):
         return HttpResponse(request.method)
 
 class PostList(generic.ListView):
-    model = Post
+    queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = 'blog/post_list.html'
