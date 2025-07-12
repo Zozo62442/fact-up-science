@@ -40,7 +40,7 @@ def post_detail(request, slug):
             comment.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'Comment submitted and awaiting approval'
+                'Transmission received! Your comment is undergoing rigorous observational analysis before it joins the public record.'
             )
     comment_form = CommentForm()
     return render(
