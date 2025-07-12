@@ -1,4 +1,7 @@
 {% load static %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
 
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
@@ -75,7 +78,7 @@
         {% else %}
         <p class="text-end m-3">You are not logged in</p>
         {% endif %}
-        
+
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
@@ -100,5 +103,7 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
         </script>
 </body>
+
+<link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
 
 </html>

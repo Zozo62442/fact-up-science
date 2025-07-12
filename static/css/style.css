@@ -1,16 +1,16 @@
 body {
-    background-color: #F9FAFC;
+    background-color: #f5faff; /* Soft science-lab blue */
 }
 
 .brand {
-    font-family: Lato, sans-serif;
+    font-family: "Lato", sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #4A4A4F;
+    color: #6A4FB7; /* Quirky purple */
 }
 
 .red-o {
-    color: #E84610;
+    color: #FF4E50; /* More playful red */
 }
 
 .thin {
@@ -18,15 +18,15 @@ body {
 }
 
 .light-bg {
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #2D3142; /* Deep space gray */
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #f5faff;
 }
 
 .card {
@@ -43,7 +43,8 @@ body {
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #188181;
+    background-image: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a18cd1);
+    color: #fff;
 }
 
 .scale {
@@ -67,7 +68,7 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background: linear-gradient(90deg, #23bbbb, #6a4fb7);
     color: white;
     position: relative;
 }
@@ -84,21 +85,19 @@ body {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
+    background: #2d3142;
     transform: skew(15deg);
     z-index: 100;
 }
 
 .post-link {
     text-decoration: none;
-    color: #445261;
+    color: #2d3142;
 }
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #FF6F61; /* Coral touch */
 }
 
 .post-title {
@@ -108,54 +107,57 @@ body {
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: #aaa;
 }
 
 .btn-signup,
 .btn-edit {
-    background-color: #188181;
+    background-image: linear-gradient(to right, #6a4fb7, #23bbbb);
     color: #fff;
+    border: none;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
+    background: #fff;
+    color: #6a4fb7;
+    border: 1px solid #23bbbb;
 }
 
 .link {
     color: #23BBBB;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: #6A4FB7;
     text-decoration: underline;
 }
 
 .btn-like {
-    color: #E84610;
+    color: #FF4E50;
     border: none;
     background: transparent;
 }
 
 .btn-delete {
     color: #fff;
-    background: #E84610;
+    background: #FF4E50;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: #FF4E50;
     background: transparent;
     border: none;
 }
 
 .faded {
-    color: rgb(172, 175, 175);
+    color: #b0b0b0;
 }
 
 .approval {
-    color: rgb(222, 146, 168);
+    color: #de92a8;
 }
