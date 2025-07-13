@@ -3,6 +3,7 @@ from .models import About
 from django_summernote.admin import SummernoteModelAdmin
 from .models import CollaborateRequest
 
+
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
 
