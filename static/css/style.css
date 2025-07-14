@@ -1,16 +1,16 @@
 body {
-    background-color: #f5faff; /* Soft science-lab blue */
+    background-color: #dde7fb; 
 }
 
 .brand {
     font-family: "Lato", sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #6A4FB7; /* Quirky purple */
+    color: #6A4FB7;
 }
 
 .red-o {
-    color: #FF4E50; /* More playful red */
+    color: #FF4E50;
 }
 
 .thin {
@@ -22,11 +22,11 @@ body {
 }
 
 .dark-bg {
-    background-color: #2D3142; /* Deep space gray */
+    background-color: #2D3142;
 }
 
 .main-bg {
-    background-color: #f5faff;
+    background-color: #dee7f9;
 }
 
 .card {
@@ -97,7 +97,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #FF6F61; /* Coral touch */
+    color: #FF6F61;
 }
 
 .post-title {
