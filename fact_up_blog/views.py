@@ -1,10 +1,11 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm
-
+from .models import NewsletterSubscriber
+from .forms import NewsletterSubscriptionForm
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by("-created_on")
@@ -77,3 +78,24 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+def newsletter_subscribe(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+
+        if not name or not email:
+            messages.error(request, "Please fill in all fields.")
+            return redirect(request.META.get('HTTP_REFERER'))
+
+        if NewsletterSubscriber.objects.filter(email=email).exists():
+            messages.info(request, "You've already subscribed.")
+        else:
+            NewsletterSubscriber.objects.create(name=name, email=email)
+            messages.success(
+                request,
+                "You're now part of the experiment! Thanks for signing up — no actual emails will be sent, because, well... this is science fiction (and an assignment)."
+            )
+
+        return redirect(request.META.get('HTTP_REFERER'))
+

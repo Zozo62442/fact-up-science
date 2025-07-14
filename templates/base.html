@@ -1,9 +1,10 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
-
 
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -100,6 +101,21 @@
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
+        <div class="newsletter-section bg-light text-dark p-4 rounded mb-3">
+            <h5 class="text-center mb-3">Stay Curious. Subscribe to our Newsletter!</h5>
+            <form method="POST" action="{% url 'newsletter_subscribe' %}" class="row g-2 justify-content-center">
+                {% csrf_token %}
+                <div class="col-md-3">
+                    <input type="text" name="name" class="form-control" placeholder="Your name" required>
+                </div>
+                <div class="col-md-3">
+                    <input type="email" name="email" class="form-control" placeholder="Your email" required>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-signup">Sign Up</button>
+                </div>
+            </form>
+        </div>
         <p class="m-0 text-center text-white">
             {% block copyright %}
             Made by Science Nerds
@@ -115,7 +131,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
         </script>
-    
+
     {% block extras %}
     {% endblock %}
 </body>
