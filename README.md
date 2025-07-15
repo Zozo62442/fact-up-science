@@ -44,6 +44,17 @@ Fact-Up-Science Blog is a vibrant, approachable science blog dedicated to reigni
     + [Contributor Tools](#contributor-tools)
     + [Community & User Profiles](#community-user-profiles)
     + [Platform Accessibility](#platform-accessibility)
+- [Testing](#testing)
+    * [HTML](#html)
+    * [CSS](#css)   
+    * [JavaScript](#javascript)
+    * [Python](#python)
+    * [Python (Unit Testing)](#python-unit-testing)
+  * [User Story Testing](#user-story-testing)
+  * [Bugs](#bugs)
+  * [Lighthouse Testing](#lighthouse-testing)
+  * [Accessibility Testing](#accessibility-testing)
+    * [WAVE Testing](#wave-testing)
 - [Deployment](#deployment)
   * [Steps to Deploy to Heroku](#steps-to-deploy-to-heroku)
   * [Forking and Cloning the Repository](#forking-and-cloning-the-repository)
@@ -485,7 +496,7 @@ This process serves as a best practice to ensure the HTML codebase is clean, sta
 | base.html                  | &check;    |                                                                                             | ![Result](/docs/base-html-htmlchecker.png)   |
 | about.html                 | &check;    | The errors caused by missing DOCTYPE at beginning, but reference to base.html file. | ![Result](/docs/about-html-htmlchecker.png)      |
 
-## CSS
+### CSS
 
 To confirm that the stylesheet adheres to current web standards, the [W3C Jigsaw](https://jigsaw.w3.org/css-validator/) was used. This tool, maintained by the W3C, checks for syntax errors, ensures proper rule usage, and promotes accessible, interoperable design across browsers.
 
@@ -495,7 +506,7 @@ Developers are encouraged to submit the project’s CSS files through the valida
 --- | --- | --- | :---:
 |CSS file | No errors |![Result](docs/readme-md/css-test.png)| &check; 
 
-## JavaScript
+### JavaScript
 The project’s JavaScript code was assessed using JSHint, a static code analysis tool that detects potential syntax errors and deviations from best practices.
 
 Upon analysis, no critical errors were reported. Additional warnings primarily related to ES6 syntax usage, such as const, let, arrow functions, for...of loops, and template literals. These are features fully supported in modern browsers, and the warnings stem from the default settings of JSHint, which expect older ECMAScript versions unless explicitly configured for ES6 (esversion: 6). Since the project targets modern browsers, the use of ES6 syntax is considered appropriate and intentional.
@@ -529,7 +540,7 @@ The python files have all been passed through [PEP8 CI Online](https://pep8ci.he
 | apps.py(my_blog)    | &check;    | ![Result](/docs/testing/apps-py-my-blog.png)    |
 | settings.py(my_blog)              | &check;    | ![Result](/docs/testing/settings-py-my-blog.png)     |
 
-## Python (Unit Testing)
+### Python (Unit Testing)
 
 Python's `unittest` framework offers a robust and flexible testing solution. 
 Ideally, every part of the project should be put through the robust automated testing. Due to time constraints I have utilized automated tests for Insights application concentrating on CRUD related functionality views, models and forms. 
@@ -591,16 +602,63 @@ User stories have been grouped by role and tested against their acceptance crite
 
 ## Bugs
 
-| Bug  | Status | Fix Commit/Notes   |
-| --------------------------------------------------------------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Delete Insight Error](https://github.com/Indre-V/blossom-therapy/issues/55#issue-2386109346)             | ✅      | Git Commit [6c6a8f7](https://github.com/Indre-V/blossom-therapy/commit/c27ede0506f73afc7dd5f986f0073512447360a9)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| [Error Pages Display](https://github.com/Indre-V/blossom-therapy/issues/56#issue-2386680102)              | ✅      | Git Commit [6c746b8](https://github.com/Indre-V/blossom-therapy/commit/6c746b88b387f9860cd4509b6f1943bfb8447f6b)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| [Comment Max Length](https://github.com/Indre-V/blossom-therapy/issues/57#issue-2390474625)               | ✅      | Git Commit [9d12b29](https://github.com/Indre-V/blossom-therapy/commit/9d12b296074edcf18af73b76419038926c617d40)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| [Modal Title Display](https://github.com/Indre-V/blossom-therapy/issues/58#issue-2390550682)              | ✅      | Git Commit [52ed983](https://github.com/Indre-V/blossom-therapy/commit/52ed983b79e9a2f48d2274dc44c228f914496ee8)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| [Visual Fa Icon Display Issue](https://github.com/Indre-V/blossom-therapy/issues/59#issue-2390577201)     | ❌      | Requires further investigation into html template structure of component files not loading libraries correctly.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| [Profile creation in Django Admin](https://github.com/Indre-V/blossom-therapy/issues/60#issue-2392645354) | ✅      | Git Commit [791e1b8](https://github.com/Indre-V/blossom-therapy/commit/791e1b8c8de985a264b9c75ac4a9bd26f39cb73c)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| [Django Admin Portal User set up](https://github.com/Indre-V/blossom-therapy/issues/61#issue-2392672850)  | ❌      | The issue lies with Django admin site (django.contrib.admin) not using Django allauth by default. Since Django admin provides a custom login view, it does not go through the normal Django allauth workflow. This means that passwords created via Django Admin Portal are not encrypted(hashed).  Based on my research, this would require amending Django admin form templates, possibly adding password hashers. I have engaged with Tutor Support regarding this issue and they could not provide me with solution either. All other users can Register and Log In. This issue **only affects users that are created directly by the Administrator in Django Admin Portal**, the fix is out of scope due to time constraints. It does not affect user management in Django Admin Portal. |
-| [Crispy Forms File Name](https://github.com/Indre-V/blossom-therapy/issues/62#issue-2393715489)           | ✅      | Git Commit [08d45cc](https://github.com/Indre-V/blossom-therapy/commit/08d45cc7bd941765fcd0a682c6d80fc0101c9389)    
+| Bug  | Status | Notes   |
+| --------------------------------------------------------------------------------------------------------- | ------ | ------------------------------------------------------ |
+| [Heroku Dynos Not Starting Automatically](https://github.com/Zozo62442/fact-up-science/issues/40)             | ✅      |          |
+| [posts.json File Failing to Load Blog Posts](https://github.com/Zozo62442/fact-up-science/issues/39)              | ✅      |                           |
+| [Cloudinary Images Not Displaying on Deployed Site](https://github.com/Zozo62442/fact-up-science/issues/38)               | ✅      |      |
+
+## Lighthouse Testing
+
+The Fact Up Science site was evaluated using Chrome DevTools, specifically leveraging the built-in Lighthouse auditing tool. Lighthouse runs a series of automated checks and generates scores across several key areas to assess the site's overall quality and performance. These categories include:
+    * Performance – Measures how fast the site loads and how quickly users can begin interacting with content.
+    * Accessibility – Evaluates the extent to which the site supports users with disabilities, including compatibility with screen readers and proper use of semantic HTML.
+    * Best Practices – Verifies whether the site follows recommended development standards and avoids outdated or risky techniques.
+    * SEO (Search Engine Optimization) – Assesses whether the website is structured in a way that improves visibility and ranking in search engine results.
+
+These tests helped identify areas for improvement and confirmed that the site meets modern web development benchmarks for usability, speed, and discoverability.
+
+| Page                  | Status          | Size    | Result | Screenshot                                                                     | Notes                                                |
+| --------------------- | --------------- | ------- | ------ | ------------------------------------------------------------------------------ | ---------------------------------------------------- |
+| Home                  | Visitor         | Desktop | ✅      | ![screenshot](/docs/testing/logged-out-home-desktop.png )        |                                                      |
+| Home                  | Registered User | Desktop | ✅      | ![screenshot](/docs/testing/logged-in-home-desktop.png )         |                                                      |
+| Home                  | Visitor         | Mobile  | ✅      | ![screenshot](/docs/testing/logged-out-home-mobile.png )         |                                                      |
+| Home                  | Registered User | Mobile  | ✅      | ![screenshot](/docs/testing/logged-in-home-mobile.png )          |                                                      |
+| About             | Anyone        | Desktop | ✅      | ![screenshot](/docs/testing/anyone-about-desktop.png )       |                                                      |
+| About             | Anyone | Mobile  | ✅      | ![screenshot](/docs/testing/anyone-about-mobile.png )      |                                                      |
+| Register           | Visitor        | Mobile  | ✅      | ![screenshot](/docs/testing/visitor-register-mobile.png )    |             |
+| Register           | Visitor | Desktop | ✅      | ![screenshot](/docs/testing/visitor-register-desktop.png )   |             |
+| Login      | Visitor | Mobile  | ✅      | ![screenshot](/docs/testing/visitor-login-mobile.png ) |                                                      |
+| Login      | Visitor | Desktop | ✅      | ![screenshot](/docs/testing/visitor-login-desktop.png ) |                           |
+| Logout   | Registered User | Desktop | ✅      | ![screenshot](/docs/testing/reg-user-logout-desktop.png ) |                                                      |
+| Logout    | Registered User | Mobile  | ✅      | ![screenshot](/docs/testing/reg-user-logout-mobile.png )      |                                                      |
+| Blog Post | Registered User | Desktop | ✅      | ![screenshot](/docs/testing/reg-user-blog-post-desktop.png ) |                                                      |
+| Blog Post    | Registered User | Mobile  | ✅      | ![screenshot](/docs/testing/reg-user-blog-post-mobile.png )      |                                              
+| Blog Post      | Visitor | Mobile  | ✅      | ![screenshot](/docs/testing/visitor-blog-post-mobile.png ) |                                                      |
+| Blog Post      | Visitor | Desktop | ✅      | ![screenshot](/docs/testing/visitor-blog-post-desktop.png ) |                                                      |
+
+## Accessibility Testing
+
+The site achieved strong accessibility scores when evaluated with Lighthouse. To further verify compliance, the [WAVE](https://wave.webaim.org/) Web Accessibility Evaluation Tool was used for more detailed analysis, particularly focusing on contrast and structural accessibility.
+
+[WAVE](/docs/testing/wave.png) identified only a few minor issues, which do not significantly impact user experience:
+    - 2 missing form labels – Likely due to unlabeled input fields in a form.
+    - 7 low contrast warnings – These may result from text colors not having sufficient contrast against their backgrounds.
+    - 3 structural alerts – Including a skipped heading level, a missing first-level heading (<h1>), and one redundant link.
+    - ARIA-related alerts – A few instances where ARIA attributes such as aria-label or aria-expanded were used but may need review.
+
+No major accessibility barriers were found, and no changes were deemed necessary based on the severity and context of the issues.
+Accessibility Considerations During Development
+
+Throughout development, key accessibility principles were kept in mind:
+    - Clear and concise instructions were provided to guide users.
+    - Input fields were validated to help users correct mistakes efficiently.
+    - Pages were manually tested to ensure no interaction barriers were introduced.
+    - ARIA labels were used where appropriate to improve screen reader support.
+
+These measures help ensure that Fact Up Science is accessible and user-friendly for a broad range of users, including those who rely on assistive technologies.
+
+[Back to top](#contents)
 
 ### Deployment
 
