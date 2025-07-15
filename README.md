@@ -2,7 +2,7 @@
 
 "" ![Main Image](/docs/readme-md/main-image.png)
 
-[Deployed Link](...)
+[Deployed Link](https://fact-up-science-blog-da75ad178a21.herokuapp.com/)
 
 Fact-Up-Science Blog is a vibrant, approachable science blog dedicated to reigniting the joy and curiosity in science for everyone. Designed to break down barriers and bust stereotypes, it celebrates the lighter, unexpected side of scientific discovery—showcasing how breakthroughs often come from happy accidents, quirky experiments, or just plain fun. The blog invites readers to dive into fascinating science stories, share their own insights, and engage in lively discussions, fostering a welcoming community where being a science nerd is cool and accessible. Whether you want to wow your friends with surprising facts or simply enjoy science as a shared passion, Fact-Up-Science Blog is your friendly gateway to the playful side of science.
 
@@ -14,14 +14,9 @@ Fact-Up-Science Blog is a vibrant, approachable science blog dedicated to reigni
   * [GitHub Projects](#github-projects)
   * [EPICS](#epics)
   * [User Stories](#user-stories)
-  * [Developer Stories](#developer-stories)
-  * [Visitor Stories](#visitor-stories)
-  * [Registered User Stories](#registered-user-stories)
-  * [Admin User Stories](#admin-user-stories)
 - [Website Goals and Objectives](#website-goals-and-objectives)
 - [Target Audience](#target-audience)
 - [Wireframes](#wireframes)
-- [Database Schema](#database-schema)
 - [Design Choices](#design-choices)
   * [Typography](#typography)
   * [Colour Scheme](#colour-scheme)
@@ -33,37 +28,34 @@ Fact-Up-Science Blog is a vibrant, approachable science blog dedicated to reigni
   * [Form Validation](#form-validation)
   * [Database Security](#database-security)
 - [Features](#features)
-  * [Header](#header)
+  * [Header/ Navbar](#header-navbar)
   * [Footer](#footer)
+  * [Newsletter Subscription](#newsletter-subscription)
+  * [About Section](#about-section)
   * [Landing Page](#landing-page)
-  * [User Account Pages](#user-account-pages)
-  * [Profile Page](#profile-page)
-  * [Add Insight](#add-insight)
-  * [Edit Insight](#edit-insight)
-  * [Delete Insight](#delete-insight)
-  * [Pending Approvals](#pending-approvals)
-  * [Insight Card](#insight-card)
-  * [Browse Insights](#browse-insights)
-  * [Insight Details](#insight-details)
-  * [User Interactions](#user-interactions)
-  * [Custom Error Pages](#custom-error-pages)
+  * [User Account Page](#user-account-page)
+  * [Register Page](#register-page)
+  * [Log In Page](#log-in-page)
+  * [Log Out Page](#log-out-page)
+  * [Comments](#comments)
 - [Django Admin Portal](#django-admin-portal)
 - [Future Features](#future-features)
-    + [Enhanced User Profiles](#enhanced-user-profiles)
-    + [Advanced Insights Management](#advanced-insights-management)
-    + [Community Interaction](#community-interaction)
-    + [Content Discovery](#content-discovery)
-    + [Accessibility and Inclusivity](#accessibility-and-inclusivity)
+    + [Content Interaction](#content-interaction)
+    + [Contributor Tools](#contributor-tools)
+    + [Community & User Profiles](#community-user-profiles)
+    + [Platform Accessibility](#platform-accessibility)
 - [Deployment](#deployment)
-  * [To deploy the project to Heroku](#to-deploy-the-project-to-heroku)
-  * [To fork the project](#to-fork-the-project)
-  * [To clone the project](#to-clone-the-project)
+  * [Steps to Deploy to Heroku](#steps-to-deploy-to-heroku)
+  * [Forking and Cloning the Repository](#forking-and-cloning-the-repository)
 - [Testing](#testing)
 - [Technology](#technology)
   * [Languages](#languages)
-  * [Frameworks](#frameworks)
-  * [Python Libraries](#python-libraries)
-  * [Programs](#programs)
+  * [Frameworks & Libraries](#frameworks-&-libraries)
+    * [Django Packages](#django-packages)
+  * [Design & Development Tools](#design-&-development-tools)
+  * [Deployment & Hosting](#deployment-&-hosting)
+  * [Version Control](#version-control)
+  * [Code Quality & Validation Tools](#code-quality-&-validation-tools)
 - [Credits](#credits)
 - [Disclaimer](#disclaimer)
 
@@ -140,21 +132,7 @@ User stories are concise, user-focused descriptions of a feature or functionalit
 
 The wireframes serve as the foundational blueprint for the Fact-Up-Science Blog’s layout and user interface. They illustrate the strategic placement of core components such as navigation menus, user profiles, content areas, and interactive elements, ensuring a cohesive and intuitive browsing experience. These visual guides have been instrumental in aligning the design with user needs and simplifying the development process. While the live platform reflects some deviations following extensive user testing and iterative refinement, the wireframes remain the key reference point for the overall structure and usability.
 
-[Mobile Wireframes](/docs/readme-md/mobile-wireframes.pdf "Mobile Wireframes")
-
-[Desktop Wireframes](/docs/readme-md/desktop-wireframes.pdf "Desktop Wireframes")
-
-[Back to top](#contents)
-
----
-
-## Database Schema
-
-The database schema defines the architecture and relationships among the principal data entities that support the blog’s functionality. The **User** table contains essential user credentials and identification details. Complementary tables, such as **Profile** and **ScienceProfile**, extend this information by storing additional user-specific data, including biographies and external links. The **Category** table organizes content thematically, while the **Post** table manages articles and blog entries with attributes like titles, authorship, content, and metadata. The **Comment** table facilitates user discussions by capturing remarks tied to individual posts. This schema is designed to optimize data integrity, support dynamic interactions, and accommodate future growth of the community.
-
-The schema visualization was generated with [dbdiagram.io](https://dbdiagram.io/).
-
-![Database Schema](/docs/readme-md/database-schema.png)
+[Wireframes](/docs/readme-md/wireframes.pdf "Wireframes")
 
 [Back to top](#contents)
 
@@ -233,9 +211,9 @@ Together, these features contribute to a secure, trustworthy platform for reader
 
 ## Features
 
-### Header
+### Header/ Navbar
 
-![Visitor Large Screen](/docs/readme-md/features/header-visitor-ml-screen.png)
+![Visitor Large Screen](/docs/readme-md/header-visitor-lg-screen.png)
 
 The header of *Fact-Up Science Blog* establishes the identity of the site from the very first glance. Positioned in the top-left corner, the blog’s title is styled with distinctive color highlights that align seamlessly with the overall color palette, ensuring visual harmony throughout the platform. While no traditional logo is used, the name display is bold, vibrant, and unmistakable.
 
@@ -246,8 +224,8 @@ Authentication features are integrated seamlessly:
 - Logged-in users can leave comments, which require superuser approval before becoming publicly visible.
 - The navbar dynamically reflects authentication status: users can see their username displayed prominently when logged in, reinforcing a personalized experience.
 
-![User Large Screen](/docs/readme-md/features/header-user-ml-screen.png)  
-![Admin Large Screen](/docs/readme-md/features/header-admin-ml-screen.png)
+![User Large Screen](/docs/readme-md/header-user-lg-screen.png)  
+![Admin Large Screen](/docs/readme-md/header-admin-lg-screen.png)
 
 </details><br/>
 
@@ -257,7 +235,7 @@ Authentication features are integrated seamlessly:
 
 ### Footer
 
-![Footer](/docs/readme-md/features/footer-ml-screen.png)
+![Footer](/docs/readme-md/footer-lg-screen.png)
 
 The footer offers both visual contrast and functional continuity. Designed with a darker colour background to subtly differentiate it from the main content areas.
 
@@ -278,6 +256,7 @@ While *Fact-Up Science Blog* does not include a traditional contact form, it fea
 This form collects only the user’s name and email address. While it does not currently send automated emails, this represents a potential area for future development and has only been created for testing purposes and fulfilling the criteria of making our own model. The form is styled to visually stand out from the surrounding content while maintaining cohesion with the rest of the site through matching text and button colours.
 
 The inclusion of this feature demonstrates a forward-looking approach to user engagement, laying the groundwork for a more interactive communication model.
+![Newsletter Subscription](/docs/readme-md/newsletter-subscription.png)
 
 [Back to top](#contents)
 
@@ -290,6 +269,7 @@ The About section offers readers an authentic and relatable introduction to the 
 This section captures the spirit of the platform: playful yet informative, grounded in real science but unafraid to show the stranger side. The text reads like a casual conversation but is structured with clarity, providing insight into the author’s background, goals, and vision for *Fact-Up Science Blog*.
 
 It also includes an invitation for collaboration (more below).
+![About Section](/docs/readme-md/about-page-view.png)
 
 #### Collaboration Section
 
@@ -297,7 +277,8 @@ Positioned just beneath the About section is a **Collaboration Form**, designed 
 
 The form is a testament to the blog’s inclusive and community-driven spirit, welcoming others into the  world of quirky science.
 
-![About Section](/docs/readme-md/features/about-page-view.png)
+![Collaboration Section](/docs/readme-md/collaboration-section.png)
+
 
 </details><br/>
 
@@ -313,7 +294,7 @@ Each blog post is displayed as a **distinct card**, featuring a bold image relev
 
 Rather than a sterile or academic interface, the landing page is built to welcome and delight—with subtle animations, well-paced spacing, and intuitive navigation contributing to an engaging user experience. Whether the reader is casually curious or a passionate science lover, the landing page offers an easy and enticing entry point into the world of *Fact-Up Science Blog*.
 
-![Landing View Large Screen](/docs/readme-md/features/landing-view-ml-screen.png)
+![Landing View Large Screen](/docs/readme-md/landing-view-lg-screen.png)
 
 </details><br/>
 
@@ -333,7 +314,7 @@ The layout is mobile-responsive and designed in harmony with the rest of the sit
 
 Even here, the science-pun-friendly tone welcomes new users with the same energy you wouldd expect from a blog that discusses square wombat poop and more.
 
-![Register](/docs/readme-md/features/register-large-screen.png)
+![Register](/docs/readme-md/register-large-screen.png)
 
 </details><br/>
 
@@ -347,7 +328,7 @@ The login page provides a familiar and functional setup for returning users. Fea
 
 The page maintains a conversational and light-hearted tone while focusing on usability and responsiveness across devices. It’s a simple and secure gateway for users ready to comment, suggest, or just read sciency blog posts.
 
-![Log In](/docs/readme-md/features/login-small-screen.png)
+![Log In](/docs/readme-md/login-large-screen.png)
 
 </details><br/>
 
@@ -361,7 +342,7 @@ The logout page offers users a minimalistic confirmation screen that lets them k
 
 Whether users are returning in five minutes or five days, the log-out page makes it easy to hop back in or browse as a visitor.
 
-![Log Out View](/docs/readme-md/features/logout-small-screen.png)
+![Log Out View](/docs/readme-md/logout-large-screen.png)
 
 </details><br/>
 
@@ -378,12 +359,7 @@ Only approved comments are visible publicly. Superusers can manage all comments�
 On submission, feedback messages are provided via a notification modal for success or errors. If the form is left blank, a standard validation error is triggered. After a successful comment, the user is redirected back to the post detail view.
 
 
-![Comment Form](/docs/readme-md/features/comment-form.png)  
-![Comment Edit](/docs/readme-md/features/comment-edit.png)  
-![Comment Delete](/docs/readme-md/features/comment-delete.png)  
-![Comment Add Success Message](/docs/readme-md/features/comment-add-message.png)  
-![Comment Edit Success Message](/docs/readme-md/features/comment-edit-message.png)  
-![Comment Posted](/docs/readme-md/features/comment-posted.png)
+![Comment Form, Edit, Delete, Awaiting Approval, Posted](/docs/readme-md/comment-form.png)  
 
 [Back to top](#contents)
 
@@ -397,7 +373,9 @@ Only superusers (and optionally, designated staff) have permission to create and
 
 Similarly, comment moderation can be managed via the admin panel, with filters for approved vs. pending comments. Blog posts also support image uploads through the admin interface, placing images into predefined template slots for clean and consistent layout.
 
-![Django Admin Portal](/docs/readme-md/features/admin-view.png)
+![Django Admin Portal Comments](/docs/readme-md/admin-view-comments.png)
+![Django Admin Portal Posts](/docs/readme-md/admin-view-posts.png)
+![Django Admin Portal Newsletter Subscriptions](/docs/readme-md/admin-view-newsletter.png)
 
 [Back to top](#contents)
 
@@ -469,14 +447,12 @@ To contribute to this project or create your own version of it, follow these ste
 1. Go to your fork or the original repository.
 2. Click the green **Code** button and copy the provided URL.
 3. Open your terminal or IDE and navigate to the desired local directory.
-4. Run the following command:
-
-```bash
+4. Run the following command: ```bash
 git clone https://github.com/your-username/repository-name.git
 
 ## Testing
 
-The *Fact-Up* science blog was rigorously tested to ensure robustness, responsiveness, and a smooth user experience across a variety of devices and environments. The testing process covered:
+The *Fact-Up Science Blog* was rigorously tested to ensure robustness, responsiveness, and a smooth user experience across a variety of devices and environments. The testing process covered:
 
 - **Code Validation:** All HTML, CSS, and Python/Django code was validated using appropriate tools to ensure syntax integrity and eliminate errors.
 - **Accessibility Checks:** Evaluated using Lighthouse and browser-based tools to ensure compliance with WCAG standards, including appropriate contrast ratios, keyboard navigation, and semantic HTML structure.
@@ -566,7 +542,7 @@ Their input helped strengthen the code structure and usability of the *Fact-Up* 
 
 ## Disclaimer
 
-*Fact-Up* is a non-commercial, educational platform designed to share science facts and knowledge freely with the community. All resources—such as text, images, and icons—used in this project have been either:
+*Fact-Up Science Blog* is a non-commercial, educational platform designed to share science facts and knowledge freely with the community. All resources—such as text, images, and icons—used in this project have been either:
 
 - Created by the developer,
 - Licensed for free educational use, or
@@ -574,6 +550,6 @@ Their input helped strengthen the code structure and usability of the *Fact-Up* 
 
 Efforts have been made to ensure that all third-party content included in this project is used within the scope of fair use, open licensing, or Creative Commons guidelines. If any attribution appears to be missing or incorrect, please reach out via GitHub Issues or the contact form so it can be addressed promptly.
 
-*Fact-Up* is not intended to generate revenue and exists solely as a knowledge-sharing and portfolio-driven academic project.
+*Fact-Up Science Blog* is not intended to generate revenue and exists solely as a knowledge-sharing and portfolio-driven academic project.
 
 [Back to top](#contents)

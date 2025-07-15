@@ -5,7 +5,7 @@ from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm
 from .models import NewsletterSubscriber
-from .forms import NewsletterSubscriptionForm
+
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).order_by("-created_on")
@@ -27,7 +27,10 @@ def post_detail(request, slug):
             comment.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'Transmission received! Your comment is undergoing rigorous observational analysis before it joins the public record.'
+                (
+                    'Transmission received! Your comment is undergoing rigorous observational '
+                    'analysis before it joins the public record.'
+                )
             )
     comment_form = CommentForm()
     return render(
@@ -79,6 +82,7 @@ def comment_delete(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+
 def newsletter_subscribe(request):
     if request.method == 'POST':
         name = request.POST.get('name')
@@ -98,4 +102,3 @@ def newsletter_subscribe(request):
             )
 
         return redirect(request.META.get('HTTP_REFERER'))
-
