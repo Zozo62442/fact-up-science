@@ -3,6 +3,7 @@ from .models import Post, Comment
 from django_summernote.admin import SummernoteModelAdmin
 from .models import NewsletterSubscriber
 
+
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
 
@@ -14,6 +15,7 @@ class PostAdmin(SummernoteModelAdmin):
 
 
 admin.site.register(Comment)
+
 
 @admin.register(NewsletterSubscriber)
 class NewsletterSubscriberAdmin(admin.ModelAdmin):

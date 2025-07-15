@@ -79,7 +79,7 @@ GitHub Projects provides a platform for organizing tasks and monitoring progress
 
 EPICS (Engineering Projects in Community Service) are large bodies of work that can be broken down into smaller tasks or user stories. Each EPIC represents a significant feature or goal within the project and is tracked on the GitHub Projects board. 
 
-- [EPIC 1: Design Planning](https://github.com/Zozo62442/fact-up-science/issues/1)
+- [EPIC 1: Enable Mailing List Export](https://github.com/Zozo62442/fact-up-science/issues/1)
 - [EPIC 2: Content and Feature Development](https://github.com/Zozo62442/fact-up-science/issues/5)
 - [EPIC 3: Admin Dashboard & Content Management](https://github.com/Zozo62442/fact-up-science/issues/20)
 - [EPIC 4: UX & Performance Optimization](https://github.com/Zozo62442/fact-up-science/issues/11)
@@ -90,7 +90,31 @@ EPICS (Engineering Projects in Community Service) are large bodies of work that 
 
 ### User Stories
 
-User stories are concise, user-focused descriptions of a feature or functionality that provide context and value. They are typically written in the format: "As a [type of user], I want [goal] so that [reason]." User stories help prioritize development tasks based on user needs and expectations.
+- [Enable Mailing List Export](https://github.com/Zozo62442/fact-up-science/issues/37) - As the site owner, I want to export subscriber emails in a standard format so that I can import them into an external email marketing tool.
+- [Like Blog Posts](https://github.com/Zozo62442/fact-up-science/issues/29) - As a signed-in user, I want to like and unlike posts, so that I can save and show appreciation for content I enjoy.
+- [Validate Code](https://github.com/Zozo62442/fact-up-science/issues/25) - As a developer, I want my code to be validated, so that it follows best practices and runs bug-free.
+- [Document the Project](https://github.com/Zozo62442/fact-up-science/issues/17) - As a developer, I want to write clear documentation, so that others can understand and maintain the project.
+- [Optimize Performance](https://github.com/Zozo62442/fact-up-science/issues/14) - As a developer, I want to ensure fast page loads, so that users enjoy a smooth experience.
+- [Accessibility Optimization](https://github.com/Zozo62442/fact-up-science/issues/12) - As a user with disabilities, I want the site to follow accessibility standards, so that I can use it without barriers.
+- [Design Visual Identity](https://github.com/Zozo62442/fact-up-science/issues/4) - As a user, I want a consistent and visually fun brand identity, so that I can feel engaged and remember the site.
+- [Create Wireframes](https://github.com/Zozo62442/fact-up-science/issues/3) - As a developer, I want to have wireframes for key pages, so that I can visualize structure and layout.
+- [Adopt Agile Methodology](https://github.com/Zozo62442/fact-up-science/issues/2) - As a developer, I want to adopt Agile practices, so that I can efficiently build a quality product aligned with user needs.
+- [Store Subscriber Emails in Database](https://github.com/Zozo62442/fact-up-science/issues/36) - As the site owner, I want newsletter signup submissions to be stored in a database so that I can manage and export the mailing list for distribution.
+- [Add Newsletter Signup Form](https://github.com/Zozo62442/fact-up-science/issues/35) - As a site visitor, I want to enter my email address into a newsletter signup form so that I can receive blog updates and extra science-related content.
+- [Mark Collaboration Requests as Processed](https://github.com/Zozo62442/fact-up-science/issues/33) - As the site owner, I want to be able to mark collaboration requests as "read" or "unread" so that I can track which requests still require a response.
+- [Contact Form for Collaboration Requests](https://github.com/Zozo62442/fact-up-science/issues/31) - As a potential collaborator, I want to submit a collaboration request through a contact form so that I can express interest in contributing to the blog.
+- [Leave Comments on Blog Posts](https://github.com/Zozo62442/fact-up-science/issues/28) - As a signed-in user, I want to leave comments on blog posts, so that I can engage with the content and share my thoughts.
+- [Sign-In to an Account](https://github.com/Zozo62442/fact-up-science/issues/27) - As a registered user, I want to sign in using my credentials, so that I can comment and like posts.
+- [Sign-Up for an Account](https://github.com/Zozo62442/fact-up-science/issues/26) - As a new visitor, I want to create an account by registering using a username, email, and password through a sign-up form, so that I can join the community and interact with blog content.
+- [Newsletter Signup for Visitors](https://github.com/Zozo62442/fact-up-science/issues/24) - As a visitor, I want to sign up for a weekly newsletter so that I can receive science discoveries directly in my inbox.
+- [Filter & Sort Posts in Admin View](https://github.com/Zozo62442/fact-up-science/issues/23) - As the site owner, I want to filter and sort posts by date, title, or tag so that I can manage my content efficiently.
+- [Create / Edit / Delete Posts](https://github.com/Zozo62442/fact-up-science/issues/22) - As the site owner, I want to create, edit, and delete blog posts from the admin dashboard so that I can update the site with new content.
+- [Admin Login & Logout](https://github.com/Zozo62442/fact-up-science/issues/21) - As the site owner, I want to log in and out securely so that I can access my dashboard privately.
+- [Deploy to Heroku](https://github.com/Zozo62442/fact-up-science/issues/18) - As a developer, I want to deploy the blog on Heroku, so that it's accessible online.
+- [Navigation UX](https://github.com/Zozo62442/fact-up-science/issues/13) - As a user, I want intuitive, responsive navigation, so that I can explore the site easily.
+- [Search & Filter Discoveries](https://github.com/Zozo62442/fact-up-science/issues/8) - As a visitor, I want to search or filter discoveries by category (e.g. medicine, tech), so that I can find relevant content quickly.
+- [Read Individual Discovery](https://github.com/Zozo62442/fact-up-science/issues/7) - As a visitor, I want to read the full details of an accidental discovery, so that I can understand its impact and background.
+- [View Science Stories](https://github.com/Zozo62442/fact-up-science/issues/6) - As a visitor, I want to browse blog posts about accidental discoveries, so that I can learn in a fun and engaging way.
 
 ## Website Goals and Objectives
 
@@ -407,6 +431,176 @@ These enhancements will further enrich *Fact-Up Science Blog* as a dynamic, educ
 [Back to top](#contents)
 
 ---
+
+
+## Responsiveness Tests
+
+To ensure that the Science Blog delivers a seamless experience across a variety of devices, I adopted a mobile-first approach early in development. This approach prioritizes small screen layouts and progressively enhances the design for larger screens.
+
+Throughout the build, I continuously monitored responsiveness using built-in browser developer tools in Google Chrome, Microsoft Edge, and Firefox, leveraging features like device emulation and viewport resizing. Special attention was given to critical breakpoints to ensure layout consistency, content readability, and intuitive navigation.
+
+In addition to browser DevTools, I utilized third-party tools such as:
+    - [Responsive Design Checker](https://responsivedesignchecker.com/ "Responsive Design Checker") – to preview the site at various standard screen sizes and confirm layout integrity.
+    - [Am I Responsive](https://ui.dev/amiresponsive "Am I responsive") – to visualize how the site adapts across multiple device frames in a single interface.
+    - [Firefox’s Mobile Simulator](https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_Mode) – to further test edge cases on less common devices and identify alignment or spacing issues that may not be visible in standard emulation.
+
+Across all these tests, I validated the responsiveness of key components including the homepage layout, blog post previews, navigation elements, featured images, and footer sections. Interactive features such as links and buttons were also assessed to ensure usability across breakpoints from mobile to widescreen desktop views.
+
+Final Test Results:
+
+| Size | Device Example     | Navigation | Element Alignments | Content Placement | Functionality | Notes                             |
+| ---- | ------------------ | ---------- | ------------------ | ----------------- | ------------- | --------------------------------- |
+| sm   | Samsung Note 20 | &check;    | &check;            | &check;           | &check;       |                                   |
+| sm   | iPhone 11 PRO      | &check;    | &check;            | &check;           | &check;       |
+| sm   | iPhone 12/13   | &check;    | &check;            | &check;           | &check;       |
+| md   | iPad 12/13 MINI      | &check;    | &check;            | &check;           | &check;       |                                   |
+| md   | Nexus 10          | &check;    | &check;            | &check;           | &check;       |                                   |
+| lg   | iPad Pro           | &check;    | &check;            | &check;           | &check;       | Update About section image sizing |
+| xl   | Mackbook Pro       | &check;    | &check;            | &check;           | &check;       |                                   |
+| xl   | HP Stream Laptop   | &check;    | &check;            | &check;           | &check;       |                                   |
+| xxl  | 1080p Full HD Television     | &check;    | &check;            | &check;           | &check;       |                                   |
+| xxl  | Desktop            | &check;    | &check;            | &check;           | &check;       |                                   |
+
+[Back to top](#contents)
+
+## Code Validation
+### HTML
+
+To ensure semantic accuracy and compliance with web standards, the HTML structure of the project should be validated using the W3C Markup Validation Service. This helps identify any potential syntax errors or structural issues in the markup.
+
+The recommended validation method involves the following steps:
+    - Navigate to the W3C Validator.
+    - Select the "Validate by Direct Input" option.
+    - Copy and paste the desired HTML code into the provided text area.
+    - Click the "Check" button to run the validation.
+    - Review the output for any warnings or errors and revise the code accordingly.
+
+This process serves as a best practice to ensure the HTML codebase is clean, standards-compliant, and optimized for browser compatibility.
+
+| File Name                  | Pass | Notes                                                                                       | View Result                                                              |
+| -------------------------- | ---- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| index.html                 | &check;    |   The errors caused by missing DOCTYPE at beginning, but reference to base.html file.                                                                                          | [Result](/docs/landing-page-htmlchecker.png)      |
+| post_list.html             | &check;    |  The errors caused by missing DOCTYPE at beginning, but reference to base.html file.                                                                                            | ![Result](/docs/post-list-htmlchecker.png)         |
+| post_detail.html           | &check;    |  The errors caused by missing DOCTYPE at beginning, but reference to base.html file.                                                                                           | ![Result](/docs/post-detail-htmlchecker.png)  |
+| base.html                  | &check;    |                                                                                             | ![Result](/docs/base-html-htmlchecker.png)   |
+| about.html                 | &check;    | The errors caused by missing DOCTYPE at beginning, but reference to base.html file. | ![Result](/docs/about-html-htmlchecker.png)      |
+
+## CSS
+
+To confirm that the stylesheet adheres to current web standards, the [W3C Jigsaw](https://jigsaw.w3.org/css-validator/) was used. This tool, maintained by the W3C, checks for syntax errors, ensures proper rule usage, and promotes accessible, interoperable design across browsers.
+
+Developers are encouraged to submit the project’s CSS files through the validator to identify any issues and maintain clean, standards-compliant stylesheets.
+
+| **Tested** | **Result** | **View Result** | **Pass** |
+--- | --- | --- | :---:
+|CSS file | No errors |![Result](docs/readme-md/css-test.png)| &check; 
+
+## JavaScript
+The project’s JavaScript code was assessed using JSHint, a static code analysis tool that detects potential syntax errors and deviations from best practices.
+
+Upon analysis, no critical errors were reported. Additional warnings primarily related to ES6 syntax usage, such as const, let, arrow functions, for...of loops, and template literals. These are features fully supported in modern browsers, and the warnings stem from the default settings of JSHint, which expect older ECMAScript versions unless explicitly configured for ES6 (esversion: 6). Since the project targets modern browsers, the use of ES6 syntax is considered appropriate and intentional.
+
+### Python
+
+The python files have all been passed through [PEP8 CI Online](https://pep8ci.herokuapp.com/)
+
+| File Name                | Pass | View Result                                                                                                       |
+| ------------------------ | ---- | ----------------------------------------------------------------------------------------------------------------- |
+| urls.py (fact_up_app)    | &check;     | ![Result](/docs/testing/urls-py-fact-up-app.png)  |
+| views.py(fact_up_app)    | &check;    | ![Result](/docs/testing/views-py-fact-up-app.png)  |
+| admin.py(fact_up_app)     | &check;    | ![Result](/docs/testing/admin-py-fact-up-app.png)   |
+| apps.py(fact_up_app)        | &check;     | ![Result](/docs/testing/apps-py-fact-up-app.png)    |
+| forms.py(fact_up_app)       | &check;     | ![Result](/docs/testing/forms-py-fact-up-app.png)   |
+| models.py(fact_up_app)      | &check;     | ![Result](/docs/testing/models-py-fact-up-app.png)   |
+| urls.py(fact_up_app)        | &check;     | ![Result](/docs/testing/urls-py-fact-up-app.png)     |
+| views.py(fact_up_app)   | &check;     | ![Result](/docs/testing/views-py-fact-up-app.png)   |
+| test_forms.py  | &check;     | ![Result](/docs/testing/test-forms-fact-up-app.png)  |
+| test_views.py  | &check;     | ![Result](/docs/testing/test-views-fact-up-app.png) |
+| test_models.py | &check;     | ![Result](/docs/testing/test-models-fact-up-app.png) |
+| admin.py(about)       | &check;    | ![Result](/docs/testing/admin-py-about.png)       |
+| forms.py(about)       | &check;    | ![Result](/docs/testing/forms-py-about.png)      |
+| models.py(about)      | &check;    | ![Result](/docs/testing/models-py-about.png)     |
+| views.py(about)       | &check;    | ![Result](/docs/testing/views-py-about.png)      |
+| urls.py(about)           | &check;    | ![Result](/docs/testing/urls-py-about.png)      |
+| admin.py(my_blog) | &check;    | ![Result](/docs/testing/admin-py-my-blog.png)   |
+| views.py(my_blog)   | &check;    | ![Result](/docs/testing/views-py-my-blog.png)    |
+| asgi.py(my_blog)  | &check;    | ![Result](/docs/testing/asgi-py-my-blog.png)    |
+| urls.py(my_blog)    | &check;    | ![Result](/docs/testing/urls-py-my-blog.png)      |
+| apps.py(my_blog)    | &check;    | ![Result](/docs/testing/apps-py-my-blog.png)    |
+| settings.py(my_blog)              | &check;    | ![Result](/docs/testing/settings-py-my-blog.png)     |
+
+## Python (Unit Testing)
+
+Python's `unittest` framework offers a robust and flexible testing solution. 
+Ideally, every part of the project should be put through the robust automated testing. Due to time constraints I have utilized automated tests for Insights application concentrating on CRUD related functionality views, models and forms. 
+
+The automated tests highlighted a redundant view and non existent html file. Although these issues did not affect the functionality of the application, the quality and maintainability of the code are equally important. 
+
+![Unittest](/docs/testing-md/automated-test-results.png)
+
+[Back to top](#contents)
+
+## User Story Testing
+
+User stories have been grouped by role and tested against their acceptance criteria.
+
+### 👩‍💻 Developer Stories
+
+| User Story | Acceptance Criteria Complete | Notes |
+|-----------|------------------------------|-------|
+| [Validate Code](https://github.com/Zozo62442/fact-up-science/issues/25) | &check;  | HTML, CSS, and JS validated. ES6 warnings noted from JSHint. |
+| [Document the Project](https://github.com/Zozo62442/fact-up-science/issues/17) | &check;  | README contains full project overview and setup instructions. |
+| [Optimize Performance](https://github.com/Zozo62442/fact-up-science/issues/14) | &check;  |  |
+| [Accessibility Optimization](https://github.com/Zozo62442/fact-up-science/issues/12) | &check;  | Semantic HTML, ARIA roles, and alt tags  used. |
+| [Create Wireframes](https://github.com/Zozo62442/fact-up-science/issues/3) | &check;  | Balsamiq wireframes completed for key pages. |
+| [Adopt Agile Methodology](https://github.com/Zozo62442/fact-up-science/issues/2) | &check;  | GitHub issues, project board, and milestones utilized. |
+| [Deploy to Heroku](https://github.com/Zozo62442/fact-up-science/issues/18) | &check;  | Site is deployed and accessible publicly. Environment variables configured. |
+
+---
+
+### 🧪 Site Visitor Stories
+
+| User Story | Acceptance Criteria Complete | Notes |
+|-----------|------------------------------|-------|
+| [View Science Stories](https://github.com/Zozo62442/fact-up-science/issues/6) | &check;  | Posts load with summary previews and images. |
+| [Read Individual Discovery](https://github.com/Zozo62442/fact-up-science/issues/7) | &check;  | Full content view includes title, date, author, and content. |
+| [Search & Filter Discoveries](https://github.com/Zozo62442/fact-up-science/issues/8) | &check;  | Filtering by category and keyword search work as expected. |
+| [Navigation UX](https://github.com/Zozo62442/fact-up-science/issues/13) | &check;  | Responsive navbar functions across screen sizes. |
+| [Sign-Up for an Account](https://github.com/Zozo62442/fact-up-science/issues/26) | &check;  | Registration works with validation for unique username, email and passwords. |
+| [Sign-In to an Account](https://github.com/Zozo62442/fact-up-science/issues/27) | &check;  | Authenticated users redirected after login. |
+| [Leave Comments on Blog Posts](https://github.com/Zozo62442/fact-up-science/issues/28) | &check;  | Comment form available only to signed-in users. |
+| [Like Blog Posts](https://github.com/Zozo62442/fact-up-science/issues/29) | x | Future feature. |
+| [Newsletter Signup for Visitors](https://github.com/Zozo62442/fact-up-science/issues/24) | &check;  | Form validates email and shows confirmation message. |
+| [Add Newsletter Signup Form](https://github.com/Zozo62442/fact-up-science/issues/35) | &check;  | Located in footer and functional across all screen sizes. |
+
+---
+
+### 🧑‍💼 Blog Owner/Admin Stories
+
+| User Story | Acceptance Criteria Complete | Notes |
+|-----------|------------------------------|-------|
+| [Admin Login & Logout](https://github.com/Zozo62442/fact-up-science/issues/21) | &check;  | Admin-only pages are protected; session ends securely. |
+| [Create / Edit / Delete Posts](https://github.com/Zozo62442/fact-up-science/issues/22) | &check;  | Admin panel allows full CRUD functionality. |
+| [Filter & Sort Posts in Admin View](https://github.com/Zozo62442/fact-up-science/issues/23) | &check;  | Posts can be sorted by date and tag. |
+| [Enable Mailing List Export](https://github.com/Zozo62442/fact-up-science/issues/37) | x  | Future feature. |
+| [Store Subscriber Emails in Database](https://github.com/Zozo62442/fact-up-science/issues/36) | &check;  | Valid emails saved securely to DB. |
+| [Contact Form for Collaboration Requests](https://github.com/Zozo62442/fact-up-science/issues/31) | &check;  | Admins can view all submissions in dashboard. |
+| [Mark Collaboration Requests as Processed](https://github.com/Zozo62442/fact-up-science/issues/33) | &check;  | Marked visually as "read/unread" within admin view. |
+| [Design Visual Identity](https://github.com/Zozo62442/fact-up-science/issues/4) | &check;  | Logo, color palette, and typography consistent sitewide. |
+
+
+## Bugs
+
+| Bug  | Status | Fix Commit/Notes   |
+| --------------------------------------------------------------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Delete Insight Error](https://github.com/Indre-V/blossom-therapy/issues/55#issue-2386109346)             | ✅      | Git Commit [6c6a8f7](https://github.com/Indre-V/blossom-therapy/commit/c27ede0506f73afc7dd5f986f0073512447360a9)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| [Error Pages Display](https://github.com/Indre-V/blossom-therapy/issues/56#issue-2386680102)              | ✅      | Git Commit [6c746b8](https://github.com/Indre-V/blossom-therapy/commit/6c746b88b387f9860cd4509b6f1943bfb8447f6b)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| [Comment Max Length](https://github.com/Indre-V/blossom-therapy/issues/57#issue-2390474625)               | ✅      | Git Commit [9d12b29](https://github.com/Indre-V/blossom-therapy/commit/9d12b296074edcf18af73b76419038926c617d40)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| [Modal Title Display](https://github.com/Indre-V/blossom-therapy/issues/58#issue-2390550682)              | ✅      | Git Commit [52ed983](https://github.com/Indre-V/blossom-therapy/commit/52ed983b79e9a2f48d2274dc44c228f914496ee8)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| [Visual Fa Icon Display Issue](https://github.com/Indre-V/blossom-therapy/issues/59#issue-2390577201)     | ❌      | Requires further investigation into html template structure of component files not loading libraries correctly.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| [Profile creation in Django Admin](https://github.com/Indre-V/blossom-therapy/issues/60#issue-2392645354) | ✅      | Git Commit [791e1b8](https://github.com/Indre-V/blossom-therapy/commit/791e1b8c8de985a264b9c75ac4a9bd26f39cb73c)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| [Django Admin Portal User set up](https://github.com/Indre-V/blossom-therapy/issues/61#issue-2392672850)  | ❌      | The issue lies with Django admin site (django.contrib.admin) not using Django allauth by default. Since Django admin provides a custom login view, it does not go through the normal Django allauth workflow. This means that passwords created via Django Admin Portal are not encrypted(hashed).  Based on my research, this would require amending Django admin form templates, possibly adding password hashers. I have engaged with Tutor Support regarding this issue and they could not provide me with solution either. All other users can Register and Log In. This issue **only affects users that are created directly by the Administrator in Django Admin Portal**, the fix is out of scope due to time constraints. It does not affect user management in Django Admin Portal. |
+| [Crispy Forms File Name](https://github.com/Indre-V/blossom-therapy/issues/62#issue-2393715489)           | ✅      | Git Commit [08d45cc](https://github.com/Indre-V/blossom-therapy/commit/08d45cc7bd941765fcd0a682c6d80fc0101c9389)    
 
 ### Deployment
 
