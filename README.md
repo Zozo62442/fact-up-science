@@ -467,7 +467,7 @@ Final Test Results:
 | sm   | iPhone 12/13   | &check;    | &check;            | &check;           | &check;       |
 | md   | iPad 12/13 MINI      | &check;    | &check;            | &check;           | &check;       |                                   |
 | md   | Nexus 10          | &check;    | &check;            | &check;           | &check;       |                                   |
-| lg   | iPad Pro           | &check;    | &check;            | &check;           | &check;       | Update About section image sizing |
+| lg   | iPad Pro           | &check;    | &check;            | &check;           | &check;       |  |
 | xl   | Mackbook Pro       | &check;    | &check;            | &check;           | &check;       |                                   |
 | xl   | HP Stream Laptop   | &check;    | &check;            | &check;           | &check;       |                                   |
 | xxl  | 1080p Full HD Television     | &check;    | &check;            | &check;           | &check;       |                                   |
@@ -526,19 +526,19 @@ The python files have all been passed through [PEP8 CI Online](https://pep8ci.he
 | models.py(fact_up_app)      | &check;     | ![Result](/docs/testing/models-py-fact-up-app.png)   |
 | urls.py(fact_up_app)        | &check;     | ![Result](/docs/testing/urls-py-fact-up-app.png)     |
 | views.py(fact_up_app)   | &check;     | ![Result](/docs/testing/views-py-fact-up-app.png)   |
-| test_forms.py  | &check;     | ![Result](/docs/testing/test-forms-fact-up-app.png)  |
-| test_views.py  | &check;     | ![Result](/docs/testing/test-views-fact-up-app.png) |
-| test_models.py | &check;     | ![Result](/docs/testing/test-models-fact-up-app.png) |
+| test_forms.py(fact_up_app)  | &check;     | ![Result](/docs/testing/test-forms-fact-up-app.png)  |
+| test_views.py(fact_up_app)  | &check;     | ![Result](/docs/testing/test-views-fact-up-app.png) |
+| test_models.py(fact_up_app) | &check;     | ![Result](/docs/testing/test-models-fact-up-app.png) |
 | admin.py(about)       | &check;    | ![Result](/docs/testing/admin-py-about.png)       |
 | forms.py(about)       | &check;    | ![Result](/docs/testing/forms-py-about.png)      |
 | models.py(about)      | &check;    | ![Result](/docs/testing/models-py-about.png)     |
 | views.py(about)       | &check;    | ![Result](/docs/testing/views-py-about.png)      |
 | urls.py(about)           | &check;    | ![Result](/docs/testing/urls-py-about.png)      |
-| admin.py(my_blog) | &check;    | ![Result](/docs/testing/admin-py-my-blog.png)   |
-| views.py(my_blog)   | &check;    | ![Result](/docs/testing/views-py-my-blog.png)    |
+| test_forms.py(about)  | &check;     | ![Result](/docs/testing/test-forms-about.png)  |
+| test_views.py(about)  | &check;     | ![Result](/docs/testing/test-views-about.png) |
+| test_models.py(about) | &check;     | ![Result](/docs/testing/test-models-about.png) |
 | asgi.py(my_blog)  | &check;    | ![Result](/docs/testing/asgi-py-my-blog.png)    |
 | urls.py(my_blog)    | &check;    | ![Result](/docs/testing/urls-py-my-blog.png)      |
-| apps.py(my_blog)    | &check;    | ![Result](/docs/testing/apps-py-my-blog.png)    |
 | settings.py(my_blog)              | &check;    | ![Result](/docs/testing/settings-py-my-blog.png)     |
 
 ### Python (Unit Testing)
