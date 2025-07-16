@@ -260,7 +260,6 @@ Authentication features are integrated seamlessly:
 - The navbar dynamically reflects authentication status: users can see their username displayed prominently when logged in, reinforcing a personalized experience.
 
 ![User Large Screen](/docs/readme-md/header-user-lg-screen.png)  
-![Admin Large Screen](/docs/readme-md/header-admin-lg-screen.png)
 
 </details><br/>
 
@@ -646,7 +645,7 @@ The site achieved strong accessibility scores when evaluated with Lighthouse. To
 [WAVE](/docs/testing/wave.png) identified only a few minor issues, which do not significantly impact user experience:
     - 2 missing form labels – Likely due to unlabeled input fields in a form.
     - 7 low contrast warnings – These may result from text colors not having sufficient contrast against their backgrounds.
-    - 3 structural alerts – Including a skipped heading level, a missing first-level heading (<h1>), and one redundant link.
+    - 3 structural alerts – Including a skipped heading level, a missing first-level heading, and one redundant link.
     - ARIA-related alerts – A few instances where ARIA attributes such as aria-label or aria-expanded were used but may need review.
 
 No major accessibility barriers were found, and no changes were deemed necessary based on the severity and context of the issues.
@@ -786,11 +785,9 @@ A full breakdown of all tests performed, including screenshots and validation re
 
 ### Feedback & Mentoring
 
-Special thanks to the following contributor for professional guidance, code feedback, and general development support throughout the project:
-
+Special thanks to my mentor for their guidance, code feedback, and general development support throughout the project:
 - [Simen Daehlin](https://github.com/Eventyret "Simen Daehlin")
 
-Their input helped strengthen the code structure and usability of the *Fact-Up* platform.
 
 ---
 
