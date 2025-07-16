@@ -290,7 +290,8 @@ While *Fact-Up Science Blog* does not include a traditional contact form, it fea
 
 This form collects only the user’s name and email address. While it does not currently send automated emails, this represents a potential area for future development and has only been created for testing purposes and fulfilling the criteria of making our own model. The form is styled to visually stand out from the surrounding content while maintaining cohesion with the rest of the site through matching text and button colours.
 
-The inclusion of this feature demonstrates a forward-looking approach to user engagement, laying the groundwork for a more interactive communication model.
+The inclusion of this feature should increase user engagement with the blog and create a more interactive experience.
+
 ![Newsletter Subscription](/docs/readme-md/newsletter-subscription.png)
 
 [Back to top](#contents)
