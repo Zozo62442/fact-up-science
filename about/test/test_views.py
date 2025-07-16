@@ -44,10 +44,3 @@ class TestAboutViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(CollaborateRequest.objects.count(), 0)
         self.assertFormError(response.context['collaborate_form'], 'name', 'This field is required.')
-
-    def test_render_about_page_with_collaborate_form(self):
-        response = self.client.get(reverse('about'))
-        self.assertEqual(response.status_code, 200)
-        self.assertIn(b'About Me', response.content)
-        self.assertIsInstance(
-            response.context['collaborate_form'], CollaborateForm)

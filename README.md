@@ -542,12 +542,13 @@ The python files have all been passed through [PEP8 CI Online](https://pep8ci.he
 
 ### Python (Unit Testing)
 
-Python's `unittest` framework offers a robust and flexible testing solution. 
-Ideally, every part of the project should be put through the robust automated testing. Due to time constraints I have utilized automated tests for Insights application concentrating on CRUD related functionality views, models and forms. 
+Python's unittest framework is a built-in testing library that enables efficient automated testing for Django applications. For this project, I implemented unit tests for the about and fact_up_blog apps, focusing on key view logic, form validation, and template rendering.
 
-The automated tests highlighted a redundant view and non existent html file. Although these issues did not affect the functionality of the application, the quality and maintainability of the code are equally important. 
+The about app tests covered the about view and ensured correct handling of valid and invalid form submissions. In the fact_up_blog app, I tested the blog post detail view, verifying that the correct post content and comment form are rendered as expected.
 
-![Unittest](/docs/testing-md/automated-test-results.png)
+These automated tests helped validate the core functionality and exposed minor inconsistencies in form handling. While broader test coverage is ideal, the implemented tests ensure confidence in critical user-facing features.
+
+![Unittest](/docs/testing/automated-test-results.png)
 
 [Back to top](#contents)
 
